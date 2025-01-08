@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Fast Execute: Python3",
+        "command": "faxecutor",
+    },
+    {
+        "caption": "Fast Execute: JavaScript (node)",
+        "command": "faxecutor",
+        "args": {
+            "executor": "node",
+            "suffix": ".js",
+        }
+    },
+    {
+        "caption": "Fast Execute: TypeScript (TSC)",
+        "command": "faxecutor",
+        "args": {
+            "executor": "tsc",
+            "suffix": ".ts",
+        }
+    },
+]
