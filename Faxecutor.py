@@ -6,6 +6,7 @@ import sublime_plugin
 
 DEFAULT_EXECUTOR = "python3"
 DEFAULT_SUFFIX = ".py"
+DEFAULT_SYNTAX = "Packages/Python/Python.sublime-syntax"
 
 
 class Settings:
@@ -13,6 +14,7 @@ class Settings:
         self.suffix = kwargs.get("suffix", DEFAULT_SUFFIX)
         self.executor = kwargs.get("executor", DEFAULT_EXECUTOR)
         self.options = kwargs.get("options")
+        self.syntax = kwargs.get("syntax", DEFAULT_SYNTAX)
 
 
 class FaxecutorCommand(sublime_plugin.TextCommand):
@@ -55,5 +57,6 @@ class FaxecutorCommand(sublime_plugin.TextCommand):
     def run(self, _, **kwargs):
         self.settings = Settings(**kwargs)
 
+        self.view.set_syntax_file(self.settings.syntax)
         self._save_if_needed()
         self._show_output(self._call())

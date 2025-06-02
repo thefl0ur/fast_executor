@@ -2,6 +2,7 @@
     {
         "caption": "Fast Execute: Python3",
         "command": "faxecutor",
+        "syntax": "Packages/Python/Python.sublime-syntax"
     },
     {
         "caption": "Fast Execute: JavaScript (node)",
@@ -9,7 +10,8 @@
         "args": {
             "executor": "node",
             "suffix": ".js",
-        }
+        },
+        "syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
     },
     {
         "caption": "Fast Execute: TypeScript (TSC)",
@@ -17,6 +19,7 @@
         "args": {
             "executor": "tsc",
             "suffix": ".ts",
-        }
+        },
+        "syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
     },
 ]
